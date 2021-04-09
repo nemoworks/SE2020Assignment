@@ -6,7 +6,7 @@ author: wangguochang
 
 请各位创建自己的git仓库来完成本次实验。
 
-请各位在https://github.com/nemoworks/SE2020Assignment仓库中提出issue，title格式为'学号-姓名'，issue内容为各位的git仓库链接。
+请各位在[本仓库](https://github.com/nemoworks/SE2020Assignment)中提出issue，title格式为'学号-姓名'，issue内容为各位的git仓库链接。
 
 issue内容仅用于我们检索各位的作业所在链接，因此建议各位在创建仓库后就创建自己的issue，避免遗忘。
 
@@ -87,7 +87,7 @@ Web开发中需要善用搜索引擎，我们提供了一些参考网站，如:
 ]
 ```
 
-提示：你可以直接引入ant desing的Table组件，事实上以上数据就来自于ant design table的官方例子（https://ant.design/components/table-cn/），并在此基础上稍作修改。
+提示：你可以直接引入ant desing的Table组件，事实上以上数据就来自于ant design table的[官方例子](https://ant.design/components/table-cn/)，并在此基础上稍作修改。
 
 效果参考：
 ![](./images/3.png)
@@ -173,7 +173,7 @@ Web开发中需要善用搜索引擎，我们提供了一些参考网站，如:
 
 提示1：本次测验全过程不会使用复杂的表单功能，因此你可以使用自己实现的简易表单组件，或是不使用表单组件，简单地插入4个input组件，和一个按钮，并分别进行管理。
 
-提示2： 你也可以使用ant design的Form组件(https://ant.design/components/form/)，事实上这是antd组件库的重要部分，也是实际开发中更常用的选项。如果你选用ant design的Form组件，由于ant design的1-4四个大版本中Form的API都有大幅不同，请务必确保你使用的ant design版本与你查看的ant design/form文档**版本一致**。你可以查看package.json来确认自己的ant design版本号。
+提示2： 你也可以使用ant design的[Form组件](https://ant.design/components/form/)，事实上这是antd组件库的重要部分，也是实际开发中更常用的选项。如果你选用ant design的Form组件，由于ant design的1-4四个大版本中Form的API都有大幅不同，请务必确保你使用的ant design版本与你查看的ant design/form文档**版本一致**。你可以查看package.json来确认自己的ant design版本号。
 
 效果参考：
 ![](./images/5-1.png)

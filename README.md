@@ -1,6 +1,15 @@
 # 简单Web应用开发Assignment
 author: wangguochang
 
+## DDL与提交方式
+请在2021年6月13日24点前完成本次Assignment，我们会依照各位的Git仓库中2021年6月13日最晚的commit版本为准进行检查。
+
+请各位创建自己的git仓库来完成本次实验。
+
+请各位在https://github.com/nemoworks/SE2020Assignment仓库中提出issue，title格式为'学号-姓名'，issue内容为各位的git仓库链接。
+
+issue内容仅用于我们检索各位的作业所在链接，因此建议各位在创建仓库后就创建自己的issue，避免遗忘。
+
 ## 前言
 
 本次Assignment模拟迭代开发一个小而功能完善的前端应用，共20个功能点。在检查功能点时只需检查最终实现即可。例如：当你完成了6.6，并且功能正确，即可认为在此之前的功能点都已正确完成。

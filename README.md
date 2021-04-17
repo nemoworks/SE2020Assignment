@@ -4,11 +4,24 @@ author: wangguochang
 ## DDL与提交方式
 请在2021年6月13日24点前完成本次Assignment，我们会依照各位的Git仓库中2021年6月13日最晚的commit版本为准进行检查。
 
-请各位创建自己的git仓库来完成本次实验。
+请各位以**团队为单位创建仓库**，并向该仓库集中提交自己的commit。
 
-请各位在[本仓库](https://github.com/nemoworks/SE2020Assignment)中提出issue，title格式为'学号-姓名'，issue内容为各位的git仓库链接。
+请各位在[本仓库](https://github.com/nemoworks/SE2020Assignment)中提出issue，title格式为
+**'WebDevAssignment-团队名'**，issue内容为各位的git仓库链接和**团队成员的学号，姓名，github账号**。
 
-issue内容仅用于我们检索各位的作业所在链接，因此建议各位在创建仓库后就创建自己的issue，避免遗忘。
+格式如[样例issue](https://github.com/nemoworks/SE2020Assignment/issues/3)。
+
+请注意：
+- issue内容用于我们检索各位的作业所在链接，因此建议各位在创建仓库后就创建自己的issue，避免遗忘。
+- 个人成绩将依据团队各个成员对项目的**Contribution**和**团队作业**完成情况评定。
+- Contribution以github项目的**insights/Contributors**页面为准，请务必**用自己的账号及时提交commits**。
+- 团队作业完成情况由最终系统功能点实现情况而定。
+- 在issue中请给出**github**项目地址，这会便于我们统计各位的Contribution。各团队可以在过程中自由选择git代码托管平台，如gitee，但最终提交时请勿忘记将gitee中的代码提交到**github项目**，例如你可以将gitee的代码pull到本地后进行以下操作:
+```bash
+git remote add webdev https://github.com/abcd/efgh.git #添加github仓库地址，并命名为webdev
+
+push webdev master #将本地的代码推送到webdev的master分支
+```
 
 ## 前言
 

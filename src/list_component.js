@@ -1,122 +1,31 @@
 import React from"react"
-import { Table, Tag, Space } from 'antd';
-import 'antd/dist/antd.css';
-
+import { Table} from 'antd';
+import  store from './store'//引入store中的数据
+console.log(store.getState())
 
 class Mylist extends React.Component
 {
-  delete = (key) => 
-  {
-    console.log(key)
-    let newData = this.state.data.filter// not DataSource
-    (
-      function (item) 
-      {
-        return item.key !== key
-      }
-    )
-    this.setState({ data: newData});
-  };
-
   constructor(props)
   {
     super(props);
-    const columns = 
-    [
-      {
-        title: 'First Name',
-        dataIndex: 'firstName',
-        key: 'firstName',
-      },
-      {
-        title: 'Last Name',
-        dataIndex: 'lastName',
-        key: 'lastName',
-      },
-      {
-        title: 'Age',
-        dataIndex: 'age',
-        key: 'age',
-      },
-      {
-        title: 'Address',
-        dataIndex: 'address',
-        key: 'address',
-      },
-      {
-        title: 'Tags',
-        key: 'tags',
-        dataIndex: 'tags',
-        render: tags => (
-          <>
-            {tags.map(tag => {
-              let color = tag.length > 5 ? 'geekblue' : 'green';
-              if (tag === 'loser') {
-                color = 'volcano';
-              }
-              return (
-                <Tag color={color} key={tag}>
-                  {tag.toUpperCase()}
-                </Tag>
-              );
-            })}
-          </>
-        ),
-      },
-      {
-        title: 'Action',
-        key: 'action',
-        render: (text, record) => 
-        
-          // console.log(text);
-          // console.log(record);
-          (
-         
-            <Space size="middle">
-              <button>Edit</button>
-              {/* <button onClick={()=>this.delete(record.key)}>Delete</button> */}
-              <button onClick={()=>this.delete(text.key)}>Delete</button>
-            </Space>
-          )
-        
-        
-      }
-    ];
-
-    const ori_data=
-    [
-      {
-        key: '1',
-        firstName: 'John',
-        lastName: 'Brown',
-        age: 32,
-        address: 'New York No. 1 Lake Park',
-        tags: ['nice', 'developer'],
-      },
-      {
-        key: '2',
-        firstName: 'Jim',
-        lastName: 'Green',
-        age: 42,
-        address: 'London No. 1 Lake Park',
-        tags: ['loser'],
-      },
-      {
-        key: '3',
-        firstName: 'Joe',
-        lastName: 'Black',
-        age: 32,
-        address: 'Sidney No. 1 Lake Park',
-        tags: ['cool', 'teacher'],
-      }
-    ];
 
     this.state={
-      columns:columns,
-      data:ori_data
+      columns:store.getState().columns,
+      data:store.getState().data
     }
   }
-  
+  componentDidMount()
+  {
+    //视图的更新，需要事件的发布和订阅，在redux中不需要写事件的发布，
+    //只需要写订阅，store中的subscribe的方法，就是订阅，将数据的修改写在
+    //subscribe中的回调函数内部
+    store.subscribe(()=>{
+        this.setState({
+              data:store.getState().data
+        })
+    })
+  }
+
   render()
   {
     return(

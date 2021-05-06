@@ -1,6 +1,5 @@
 import { BrowserRouter , Switch,Route,Link} from "react-router-dom"
 import {list,employee,Single} from "./pages";
-// import get from "./get"
 import "./App.css"
 
 export default function RouterApp(){

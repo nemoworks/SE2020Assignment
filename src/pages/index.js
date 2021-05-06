@@ -1,3 +1,4 @@
 import list from "./list"
 import employee from "./employee"
-export{ list,employee };
+import Single from "./single_row"
+export{ list,employee,Single};

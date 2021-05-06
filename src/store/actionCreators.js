@@ -10,6 +10,13 @@ const actionCreators={
             payload:key//该负载可有可无，根据组件在调用increasement方法时是否传递参数来决定
         }
         store.dispatch(action)//发送动作
+    },
+    initialize ( data ){//
+        let action={//定义动作
+            type:type.INITIALIZE,
+            payload:data//该负载可有可无，根据组件在调用increasement方法时是否传递参数来决定
+        }
+        store.dispatch(action)//发送动作
     }
 }
 

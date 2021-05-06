@@ -1,6 +1,6 @@
 package com.se2020.backend.controller;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSON;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,25 +14,33 @@ import org.apache.commons.io.FileUtils;
 public class DataController {
     @RequestMapping("/GET")
     public String getData() throws IOException {
-        File jsonFile = new File(this.getClass().getClassLoader().getResource("data.json").toString().substring(6));
+        String path = System.getProperty("user.dir");
+        path = path + "/data/data.json";
+        System.out.println(path);
+        File jsonFile = new File(path);
         return FileUtils.readFileToString(jsonFile);
     }
     @RequestMapping("/POST")
-    public void postData(@RequestBody JSONObject jsonData) throws IOException {
+    public void postData(@RequestBody Object jsonData) throws IOException {
+        String path = System.getProperty("user.dir");
+        path = path + "/data/data.json";
         Tool tool=new Tool();
-        File file=new File("/data.json");
+        File file=new File(path);
         if(file.exists()) {
             file.delete();
         }
         file.createNewFile();
+
         FileOutputStream fileOutputStream=new FileOutputStream(file);
         OutputStreamWriter outputStreamWriter=new OutputStreamWriter(fileOutputStream,"utf-8");
         BufferedWriter bufferedWriter= new BufferedWriter(outputStreamWriter);
 
-        String jsonString=jsonData.toString();
+        String jsonString=JSON.toJSONString(jsonData);
         String JsonString=tool.stringToJSON(jsonString);
+
         bufferedWriter.write(JsonString);
         bufferedWriter.flush();
+        System.out.println("FLUSH SUCCESS");
         bufferedWriter.close();
     }
 }
@@ -42,6 +50,7 @@ class Tool {
     public String stringToJSON(String strJson) {
         int tabNum = 0;
         StringBuffer jsonFormat = new StringBuffer();
+        jsonFormat.append("{\n\"data\":");
         int length = strJson.length();
         for (int i = 0; i < length; i++) {
             char c = strJson.charAt(i);
@@ -61,6 +70,7 @@ class Tool {
                 jsonFormat.append(c);
             }
         }
+        jsonFormat.append("\n}");
         return jsonFormat.toString();
     }
     public String getSpaceOrTab(int tabNum) {

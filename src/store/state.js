@@ -3,7 +3,29 @@ import React from"react"
 import { Tag, Space } from 'antd';
 import 'antd/dist/antd.css';
 import  actionCreators from './actionCreators'
-import axios from "axios";
+// import { createHashHistory } from 'history';
+// import {browseHistory} from "react-router"
+import {Single} from "../pages";
+import { BrowserRouter , Switch,Route,Link} from "react-router-dom"
+// const hashHistory =createHashHistory()
+
+// var data = {
+//   key: '1',
+//   firstName: 'John',
+//   lastName: 'Brown',
+//   age: 32,
+//   address: 'New York No. 1 Lake Park',
+//   tags: ['nice', 'developer'],
+//   };
+
+// var path = {
+//   pathname:'/employee/1',
+//   query:data,
+// }
+
+
+
+
 const columns = 
 [
   {
@@ -52,7 +74,16 @@ const columns =
     render: (text, record) => 
       (
         <Space size="middle">
-          <button>Edit</button>
+           <BrowserRouter>
+            <div>
+              <Link to="/employee/2">Edit</Link>
+            </div>
+            <Switch>      
+              <Route path="/employee/:id" exact component={Single}></Route>
+            </Switch>
+           </BrowserRouter>
+         
+          {/* <button onClick={()=>browseHistory.push(text.key)}>Edit</button> */}
           <button onClick={()=> actionCreators.delete(text.key)}>Delete</button>
         </Space>
       )
@@ -89,9 +120,11 @@ const ori_data=
     }
 ];
 
+    
+
 const state={
     columns:columns,
-    data:ori_data
+    data:[]
 }
 
 export default state

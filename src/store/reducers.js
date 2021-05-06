@@ -25,7 +25,10 @@ const reducers=(prevState = state , action)=>{
             newState.data=newData
             
             break;
-    
+        case type.INITIALIZE:
+            let newData_2 = action.payload
+            newState.data = newData_2
+            break;
         default:
             break;
     }

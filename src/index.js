@@ -1,10 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./RouterApp"
+import RouterApp from "./RouterApp"
 
 ReactDOM.render(
   <div>
-    <App/>
+    <RouterApp/>
   </div>
   ,
   document.getElementById("root")

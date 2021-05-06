@@ -24,6 +24,22 @@
     "age": 32,
     "address": "Sidney No. 1 Lake Park",
     "tags": ["cool", "teacher"]
+    },
+    {
+    "key": "4",
+    "firstName": "Jack",
+    "lastName": "Blue",
+    "age": 22,
+    "address": "Sidney No. 2 Lake Park",
+    "tags": ["programmer", "blad"]
+    },
+    {
+    "key": "5",
+    "firstName": "Java",
+    "lastName": "Script",
+    "age": 26,
+    "address": "Netscape Mozilla",
+    "tags": ["OOP", "Scripting"]
     }
 ]
 

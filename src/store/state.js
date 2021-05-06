@@ -3,25 +3,10 @@ import React from"react"
 import { Tag, Space } from 'antd';
 import 'antd/dist/antd.css';
 import  actionCreators from './actionCreators'
-// import { createHashHistory } from 'history';
-// import {browseHistory} from "react-router"
+
 import {Single} from "../pages";
 import { BrowserRouter , Switch,Route,Link} from "react-router-dom"
-// const hashHistory =createHashHistory()
 
-// var data = {
-//   key: '1',
-//   firstName: 'John',
-//   lastName: 'Brown',
-//   age: 32,
-//   address: 'New York No. 1 Lake Park',
-//   tags: ['nice', 'developer'],
-//   };
-
-// var path = {
-//   pathname:'/employee/1',
-//   query:data,
-// }
 
 
 

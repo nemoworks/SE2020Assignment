@@ -22,4 +22,6 @@ yarn start 启动前端
   - 也可以在list页面上执行删除，点击GET,POST按钮
   
   
-- 点击To aaa或者输入/localhost:3000/
+- 点击To aaa或者输入/localhost:3000/employee/aaa 可以进入aaa个人页面
+  - 目前个人页面只会显示employee aaa's page字符串，根据/employee/:id中的id替换字符串内容
+ 

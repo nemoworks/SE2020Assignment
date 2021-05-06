@@ -20,7 +20,6 @@ export default function GET() {
       console.log(error);
     });
 
-  // test
   // save_data=[
   //   {
   //   key: '1',

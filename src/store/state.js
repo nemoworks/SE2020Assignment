@@ -3,6 +3,7 @@ import React from"react"
 import { Tag, Space } from 'antd';
 import 'antd/dist/antd.css';
 import  actionCreators from './actionCreators'
+import axios from "axios";
 const columns = 
 [
   {
@@ -88,14 +89,9 @@ const ori_data=
     }
 ];
 
-    
-
 const state={
     columns:columns,
-    data:ori_data,
-    created(){
-      alert("Hi!")
-    }
+    data:ori_data
 }
 
 export default state

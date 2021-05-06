@@ -40,6 +40,14 @@
     "age": 26,
     "address": "Netscape Mozilla",
     "tags": ["OOP", "Scripting"]
+    },
+    {
+    "key": "6",
+    "firstName": "Jonathan",
+    "lastName": "Joestar",
+    "age": 99,
+    "address": "Netscape Mozilla",
+    "tags": ["ZAWARUDO"]
     }
 ]
 

@@ -92,7 +92,10 @@ const ori_data=
 
 const state={
     columns:columns,
-    data:ori_data
+    data:ori_data,
+    created(){
+      alert("Hi!")
+    }
 }
 
 export default state

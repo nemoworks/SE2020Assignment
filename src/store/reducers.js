@@ -29,6 +29,22 @@ const reducers=(prevState = state , action)=>{
             let newData_2 = action.payload
             newState.data = newData_2
             break;
+
+        case type.MODIFY:
+            let coming_change = action.payload
+            var newData_3 = newState.data
+            
+            console.log("in modify")
+            for(var i = 0; i < newData_3.length; i++) {
+                if( newData_3[i].firstName == coming_change.firstname && newData_3[i].lastName == coming_change.lastname)
+                   {
+                       newData_3[i].age = parseInt(coming_change.age)
+                       newData_3[i].address = coming_change.address
+                       console.log("match and modify!")
+                   }
+                     
+            }
+            newState.data=newData_3
         default:
             break;
     }

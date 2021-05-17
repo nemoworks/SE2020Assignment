@@ -1,4 +1,6 @@
 import React from"react"
+import  actionCreators from './store/actionCreators'
+import store from "./store"
 // import ReactDOM from "react-dom"
 import { Form, Input, Button, Checkbox } from 'antd';
 const layout = {
@@ -20,6 +22,8 @@ const Form_init = () =>
 {
     const onFinish = (values) => {
       console.log('Success:', values);
+      actionCreators.modify(values);
+      console.log("after modify , data:",store.getState().data)
     };
   
     const onFinishFailed = (errorInfo) => {
@@ -59,7 +63,7 @@ const Form_init = () =>
               },
             ]}
           >
-            <Input/>
+            <Input />
           </Form.Item>
 
           <Form.Item
@@ -88,6 +92,5 @@ const Form_init = () =>
         </Form>
       );
 };
-    
-// ReactDOM.render(<Demo />, mountNode);
+
 export default Form_init

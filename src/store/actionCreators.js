@@ -17,6 +17,13 @@ const actionCreators={
             payload:data
         }
         store.dispatch(action)//发送动作
+    },
+    modify(data){
+        let action={
+            type:type.MODIFY,
+            payload:data
+        }
+        store.dispatch(action)//发送动作
     }
 }
 

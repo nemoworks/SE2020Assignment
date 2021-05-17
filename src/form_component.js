@@ -6,7 +6,7 @@ const layout = {
       span: 8,
     },
     wrapperCol: {
-      span: 16,
+      span: 8,
     },
   };
 const tailLayout = {
@@ -16,7 +16,7 @@ const tailLayout = {
     },
   };
 
-const Demo = () => 
+const Form_init = () => 
 {
     const onFinish = (values) => {
       console.log('Success:', values);
@@ -37,12 +37,12 @@ const Demo = () =>
           onFinishFailed={onFinishFailed}
         >
           <Form.Item
-            label="Username"
-            name="username"
+            label="FirstName"
+            name="firstname"
             rules={[
               {
                 required: true,
-                message: 'Please input your username!',
+                message: 'Please input your firstname!',
               },
             ]}
           >
@@ -50,16 +50,30 @@ const Demo = () =>
           </Form.Item>
     
           <Form.Item
-            label="Password"
-            name="password"
+            label="LastName"
+            name="lastname"
             rules={[
               {
                 required: true,
-                message: 'Please input your password!',
+                message: 'Please input your lastname!',
               },
             ]}
           >
-            <Input.Password />
+            <Input/>
+          </Form.Item>
+
+          <Form.Item
+            label="Age"
+            name="age"
+          >
+            <Input/>
+          </Form.Item>
+
+          <Form.Item
+            label="Address"
+            name="address"
+          >
+            <Input/>
           </Form.Item>
     
           <Form.Item {...tailLayout} name="remember" valuePropName="checked">
@@ -76,4 +90,4 @@ const Demo = () =>
 };
     
 // ReactDOM.render(<Demo />, mountNode);
-export default Demo
+export default Form_init

@@ -7,6 +7,7 @@ import  actionCreators from './actionCreators'
 // import {browseHistory} from "react-router"
 import {Single} from "../pages";
 import { BrowserRouter , Switch,Route,Link} from "react-router-dom"
+import {withRouter } from "react-router";
 // const hashHistory =createHashHistory()
 
 // var data = {
@@ -74,23 +75,29 @@ const columns =
     render: (text, record) => 
       (
         <Space size="middle">
-           <BrowserRouter>
+         
+           {/* <BrowserRouter>
             <div>
               <Link to="/employee/2">Edit</Link>
             </div>
             <Switch>      
-              <Route path="/employee/:id" exact component={Single}></Route>
+              <Route path="/employee/:id" component={Single}></Route>
             </Switch>
-           </BrowserRouter>
+           </BrowserRouter> */}
          
-          {/* <button onClick={()=>browseHistory.push(text.key)}>Edit</button> */}
+          <button onClick={()=>changepage(text.key)}>Edit</button>
           <button onClick={()=> actionCreators.delete(text.key)}>Delete</button>
+          
         </Space>
       )
     
     
   }
 ];
+
+const changepage = (param) =>{
+  window.location.pathname = "/employee/"+param
+}
 
 const ori_data=
 [
@@ -124,7 +131,7 @@ const ori_data=
 
 const state={
     columns:columns,
-    data:[]
+    data:ori_data
 }
 
 export default state

@@ -7,14 +7,14 @@ const actionCreators={
     delete( key ){//此处的val来自于组件调用该方法时，传递过来的参数
         let action={//定义动作
             type:type.DELETE,
-            payload:key//该负载可有可无，根据组件在调用increasement方法时是否传递参数来决定
+            payload:key
         }
         store.dispatch(action)//发送动作
     },
     initialize ( data ){//
         let action={//定义动作
             type:type.INITIALIZE,
-            payload:data//该负载可有可无，根据组件在调用increasement方法时是否传递参数来决定
+            payload:data
         }
         store.dispatch(action)//发送动作
     }

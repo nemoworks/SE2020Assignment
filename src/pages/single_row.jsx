@@ -1,12 +1,14 @@
 import { useRouteMatch }from "react-router-dom"
-
+import Mylist from "../list_component"
 export default function Single()// if use hooks , then you need upper letter to start with 
 {
     console.log( useRouteMatch().params.id)
     var id = useRouteMatch().params.id;
+    console.log("id type:", typeof id)
     return (
     <div>
          <div className="employee page container">employee {id}'s page</div>
+         <Mylist name={id}/>
     </div>
     )
 }

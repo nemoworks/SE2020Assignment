@@ -76,15 +76,6 @@ const columns =
       (
         <Space size="middle">
          
-           {/* <BrowserRouter>
-            <div>
-              <Link to="/employee/2">Edit</Link>
-            </div>
-            <Switch>      
-              <Route path="/employee/:id" component={Single}></Route>
-            </Switch>
-           </BrowserRouter> */}
-         
           <button onClick={()=>changepage(text.key)}>Edit</button>
           <button onClick={()=> actionCreators.delete(text.key)}>Delete</button>
           

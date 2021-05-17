@@ -43,6 +43,14 @@ class Mylist extends React.Component
       data:store.getState().data
       
     }
+    console.log(this.props.name)
+    console.log(store.getState().data)
+    
+if (typeof(this.props.name) != "undefined") {
+  this.state.data=[ store.getState().data[parseInt(this.props.name)-1] ]
+}
+    
+    
     // axios.get('/api/data').then((res) => {
     //   //console.log(res.status)
     //   if(res.status === 200){

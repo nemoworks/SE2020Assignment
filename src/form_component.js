@@ -23,7 +23,7 @@ const Form_init = () =>
     const onFinish = (values) => {
       console.log('Success:', values);
       actionCreators.modify(values);
-      console.log("after modify , data:",store.getState().data)
+       console.log("after modify , data:",store.getState().data)
     };
   
     const onFinishFailed = (errorInfo) => {

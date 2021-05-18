@@ -75,10 +75,16 @@ const columns =
     render: (text, record) => 
       (
         <Space size="middle">
-         
-          <button onClick={()=>changepage(text.key)}>Edit</button>
-          <button onClick={()=> actionCreators.delete(text.key)}>Delete</button>
-          
+          <button>
+            <Link to={"/employee/"+text.key}>
+            Edit
+            </Link>
+          </button>
+          <button onClick={()=> actionCreators.delete(text.key)}>
+            <Link to={"/list"}>
+              Delete
+            </Link>
+          </button>
         </Space>
       )
     
@@ -86,9 +92,6 @@ const columns =
   }
 ];
 
-const changepage = (param) =>{
-  window.location.pathname = "/employee/"+param
-}
 
 const ori_data=
 [

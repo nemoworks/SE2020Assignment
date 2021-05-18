@@ -7,7 +7,6 @@ export default function Single()// if use hooks , then you need upper letter to 
     console.log("id type:", typeof id)
     return (
     <div>
-         <div className="employee page container">employee {id}'s page</div>
          <Mylist name={id}/>
     </div>
     )

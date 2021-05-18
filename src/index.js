@@ -35,7 +35,7 @@ ReactDOM.render(
                   </Switch>
                 </Content>
 
-                <Footer style={{ textAlign: 'center' }}>now we are at sum : 90</Footer>
+                <Footer style={{ textAlign: 'center' }}>now we are at sum : 130</Footer>
                
     </Layout>
     </BrowserRouter>

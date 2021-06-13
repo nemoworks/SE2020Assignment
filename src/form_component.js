@@ -1,7 +1,8 @@
 import React from"react"
 import  actionCreators from './store/actionCreators'
 import store from "./store"
-// import ReactDOM from "react-dom"
+import POST from "./POST";
+
 import { Form, Input, Button } from 'antd';
 const layout = {
     labelCol: {
@@ -23,7 +24,8 @@ const Form_init = () =>
     const onFinish = (values) => {
       console.log('Success:', values);
       actionCreators.modify(values);
-       console.log("after modify , data:",store.getState().data)
+      POST();
+      console.log("after modify , data:",store.getState().data)
     };
   
     const onFinishFailed = (errorInfo) => {

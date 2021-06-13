@@ -25,3 +25,7 @@ yarn start 启动前端
 - 点击To aaa或者输入/localhost:3000/employee/aaa 可以进入aaa个人页面
   - 目前个人页面只会显示employee aaa's page字符串，根据/employee/:id中的id替换字符串内容
  
+
+### 备注
+
+- 后端的数据存储在/backend/data/data.json

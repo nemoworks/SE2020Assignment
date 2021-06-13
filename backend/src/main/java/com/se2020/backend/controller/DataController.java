@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 @RestController
 @RequestMapping("/api")
 public class DataController {
+
     @RequestMapping("/GET")
     public String getData() throws IOException {
         String path = System.getProperty("user.dir");
@@ -20,6 +21,7 @@ public class DataController {
         File jsonFile = new File(path);
         return FileUtils.readFileToString(jsonFile);
     }
+
     @RequestMapping("/POST")
     public void postData(@RequestBody Object jsonData) throws IOException {
         String path = System.getProperty("user.dir");
@@ -46,7 +48,9 @@ public class DataController {
 }
 
 class Tool {
+
     private boolean isTab = true;
+
     public String stringToJSON(String strJson) {
         int tabNum = 0;
         StringBuffer jsonFormat = new StringBuffer();
@@ -73,6 +77,7 @@ class Tool {
         jsonFormat.append("\n}");
         return jsonFormat.toString();
     }
+    
     public String getSpaceOrTab(int tabNum) {
         StringBuffer sbTab = new StringBuffer();
         for (int i = 0; i < tabNum; i++) {

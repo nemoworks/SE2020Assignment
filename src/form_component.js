@@ -2,7 +2,7 @@ import React from"react"
 import  actionCreators from './store/actionCreators'
 import store from "./store"
 // import ReactDOM from "react-dom"
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
 const layout = {
     labelCol: {
       span: 8,
@@ -78,10 +78,6 @@ const Form_init = () =>
             name="address"
           >
             <Input/>
-          </Form.Item>
-    
-          <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-            <Checkbox>Remember me</Checkbox>
           </Form.Item>
     
           <Form.Item {...tailLayout}>

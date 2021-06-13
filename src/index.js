@@ -32,10 +32,11 @@ ReactDOM.render(
                       <Route path="/employee" exact component={employee}></Route>
                       <Route path="/list" exact component={list}></Route>
                       <Route path="/employee/:id" component={Single}></Route>
+                      {/* <Route path="/" exact component={list}></Route> */}
                   </Switch>
                 </Content>
 
-                <Footer style={{ textAlign: 'center' }}>now we are at sum : 130</Footer>
+                <Footer style={{ textAlign: 'center' }}>2021 spring SE project</Footer>
                
     </Layout>
     </BrowserRouter>

@@ -23,7 +23,10 @@ if (typeof(this.props.name) != "undefined") {
   console.log("in id's page , key:",parseInt(this.props.name))
   for ( let i=0; i<store.getState().data.length;i++)
     if(store.getState().data[i].key == this.props.name)
+    {
       this.state.data=[store.getState().data[i]]
+    }
+     
 
 }
     

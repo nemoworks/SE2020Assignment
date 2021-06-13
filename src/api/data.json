@@ -1,0 +1,77 @@
+[
+    {
+        "key": "1",
+        "firstName": "John",
+        "lastName": "Brown",
+        "age": 32,
+        "address": "New York No. 1 Lake Park",
+        "tags": [
+            "nice",
+            "developer"
+        ]
+    },
+    {
+        "key": "2",
+        "firstName": "Jim",
+        "lastName": "Green",
+        "age": 42,
+        "address": "London No. 1 Lake Park",
+        "tags": [
+            "loser"
+        ]
+    },
+    {
+        "key": "3",
+        "firstName": "Joe",
+        "lastName": "Black",
+        "age": 32,
+        "address": "Sidney No. 1 Lake Park",
+        "tags": [
+            "cool",
+            "teacher"
+        ]
+    },
+    {
+        "key": "4",
+        "firstName": "Jack",
+        "lastName": "Blue",
+        "age": 22,
+        "address": "Sidney No. 2 Lake Park",
+        "tags": [
+            "programmer",
+            "blad"
+        ]
+    },
+    {
+        "key": "5",
+        "firstName": "Java",
+        "lastName": "Script",
+        "age": 26,
+        "address": "Netscape Mozilla",
+        "tags": [
+            "OOP",
+            "Scripting"
+        ]
+    },
+    {
+        "key": "6",
+        "firstName": "Jonathan",
+        "lastName": "Joestar",
+        "age": 99,
+        "address": "Netscape Mozilla",
+        "tags": [
+            "ZAWARUDO"
+        ]
+    },
+    {
+        "key": "4",
+        "firstName": "Ezylryb",
+        "lastName": "Black",
+        "age": 20,
+        "address": "London No. 1 Lake Park",
+        "tags": [
+            "cool",
+            "student"
+        ]
+    }
+]
